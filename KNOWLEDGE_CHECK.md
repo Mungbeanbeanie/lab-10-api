@@ -14,4 +14,4 @@ Name the Lambda function from your screenshot. Why did Chalice create this funct
 
 **Your answer:**
 
-...
+The function is `book-analyzer-dev`. The Lab 07 function `book-analyzer-dev-analyze_new_book` runs only the `analyze_new_book()` handler, which expects an S3 event with a bucket and a key, so it cannot answer an HTTP request. Chalice therefore created one new function that receives the requests from API Gateway and runs the matching `@app.route` handler.
